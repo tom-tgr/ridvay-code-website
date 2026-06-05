@@ -15,10 +15,11 @@ Marketplace SEO. Post to the best-fit community first, learn, then widen.
 - [ ] **Open VSX** published (so non-MS VS Code builds — VSCodium, Cursor — can install).
 - [ ] `code.ridvay.com` DNS live (CNAME + TXT) and HTTPS cert issued.
 - [ ] Every Marketplace/GitHub link in the posts resolves (no 404 — the #1 launch-day own-goal).
-- [ ] **Telemetry verified.** Roo Code historically ships PostHog telemetry. Confirm it's
-      **off by default or clearly opt-in** before making any "private / nothing leaves your
-      machine" claim. **Do not claim "zero telemetry" until this is checked in code.** This is
-      a credibility landmine on exactly the audiences we're targeting.
+- [x] **Telemetry verified — there is none.** Checked: no posthog/analytics in any
+      dependency, no `captureEvent`/`TelemetryService` in `src` or `packages`, and a grep of
+      the shipping `dist/extension.js` bundle finds zero telemetry code. `PRIVACY.md` rewritten
+      to match. This flipped from a risk into a **headline** — lead with "no telemetry,
+      verifiable in the bundle."
 - [ ] Clean-install smoke test: fresh VS Code → install → connect Ollama in **under a minute**
       (that's the CTA promise on the site — it must be true).
 - [ ] One screenshot + one short GIF of a real local-model edit loop (Marketplace + X need visuals).
@@ -47,7 +48,9 @@ put **links in the first comment**, and actually engage. Best window: Tue–Thu,
 >   own subscription. No keys to me, no proxy.
 >
 > No Ridvay account, no API middleman, no "bring your OpenAI key" funnel — I removed that
-> surface from the UI. With Ollama or LM Studio, nothing leaves your box.
+> surface from the UI. With Ollama or LM Studio, nothing leaves your box. And there's **no
+> telemetry** — no PostHog, no analytics, nothing phones home. I grepped the shipped bundle to
+> be sure, and the source is Apache-2.0 so you can too.
 >
 > It does the usual agent stuff (multi-file edits, run commands, read the repo), but the thing
 > I actually care about is making that loop usable on **local** models, not just frontier APIs.
@@ -90,6 +93,9 @@ about it being a fork, end with a real ask. Best window: weekday ~8–10am ET.
 > above, revived a direct Claude Code CLI provider, and rebranded. The cloud providers still
 > exist in the code (hidden in the UI) to keep upstream merges sane.
 >
+> There's also no telemetry — no PostHog or analytics in the build (I checked the shipped
+> `.vsix` bundle, not just the settings). PRIVACY.md spells out exactly what goes where.
+>
 > Free. Marketplace + Open VSX + source linked below.
 >
 > I'd most love feedback on the local-model UX: which model/quant you run, and where the agent
@@ -109,7 +115,8 @@ about it being a fork, end with a real ask. Best window: weekday ~8–10am ET.
 > • Your own Claude Code CLI — your Anthropic sub, direct
 >
 > **3/** With Ollama or LM Studio your code never leaves the machine. With Claude Code it goes
-> straight to Anthropic on your plan. No Ridvay server in any path. That's the whole point.
+> straight to Anthropic on your plan. No Ridvay server in any path — and no telemetry, nothing
+> phones home (verifiable in the open bundle). That's the whole point.
 >
 > **4/** It's an open fork of Roo Code (Apache-2.0, lineage back to Cline — credit to both).
 > I stripped it to the three local-first integrations, revived a direct Claude Code provider,
@@ -130,8 +137,9 @@ Pin tweet 1. Reply to the thread with the GIF.
 - **"How is this different from Cline / Roo / Continue?"** It's a Roo fork narrowed to
   local-first: fewer knobs, the three local integrations done well, plus a direct Claude Code
   CLI provider. Want the full cloud-provider matrix? Upstream Roo is excellent — use that.
-- **"Does it phone home?"** Answer *truthfully* from the telemetry check above. If telemetry
-  is disabled, say so and link the code. If not, don't post yet.
+- **"Does it phone home?"** No. There's no telemetry or analytics in the build — verified in
+  the dependencies, the source, and the shipped `dist/extension.js` bundle. Link PRIVACY.md
+  and the source so people can check. (Verified — lead with this.)
 - **"Why fork instead of contribute upstream?"** Different product opinion (local-only); didn't
   want to force that on upstream. Improvements that aren't opinionated can flow back.
 - **"Windows / Linux?"** [confirm before launch]
