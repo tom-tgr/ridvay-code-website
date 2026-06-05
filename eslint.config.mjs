@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Cypress e2e specs use their own globals/types (see cypress/tsconfig.json).
+    "cypress/**",
   ]),
 ]);
 

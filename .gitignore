@@ -39,6 +39,11 @@ yarn-error.log*
 # firebase deploy cache
 .firebase/
 
+# cypress run artifacts
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
