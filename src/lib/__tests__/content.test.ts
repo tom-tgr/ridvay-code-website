@@ -49,9 +49,17 @@ describe("site content", () => {
 
   it("has the expected section counts", () => {
     expect(FEATURES).toHaveLength(6);
-    expect(PRIVACY).toHaveLength(3);
+    expect(PRIVACY).toHaveLength(4);
     expect(NAV).toHaveLength(4);
     expect(LANGUAGES.length).toBeGreaterThanOrEqual(4);
+  });
+
+  it("leads the privacy story with the zero-telemetry edge", () => {
+    const hasTelemetryPoint = PRIVACY.some(
+      (p) => /telemetry/i.test(p.title) || /telemetry/i.test(p.description),
+    );
+    expect(hasTelemetryPoint).toBe(true);
+    expect(BRAND.description).toMatch(/telemetry/i);
   });
 
   it("gives every integration a name, tagline, description, and https href", () => {

@@ -5,7 +5,7 @@ export const BRAND = {
   name: "Ridvay Code",
   tagline: "Your senior AI developer — running entirely on your machine",
   description:
-    "Ridvay Code is a local-first AI coding agent for VS Code. It writes code, fixes bugs, generates tests, and understands your whole codebase — powered by your own local models or Claude Code. No cloud account, no API middleman. Your code never leaves your machine.",
+    "Ridvay Code is a local-first AI coding agent for VS Code. It writes code, fixes bugs, generates tests, and understands your whole codebase — powered by your own local models or Claude Code. No cloud account, no API middleman, and zero telemetry. Your code never leaves your machine — and you can verify it.",
 } as const;
 
 export const LINKS = {
@@ -105,6 +105,11 @@ export const FEATURES: ReadonlyArray<Feature> = [
 export type PrivacyPoint = { title: string; description: string };
 
 export const PRIVACY: ReadonlyArray<PrivacyPoint> = [
+  {
+    title: "No telemetry — and you can prove it",
+    description:
+      "We don't ship a tracker at all. No analytics, no usage data, no phone-home — nothing to opt out of. Grep the published extension bundle and check for yourself.",
+  },
   {
     title: "Your code never leaves your machine",
     description:

@@ -4,6 +4,18 @@ Goal: **1,000 users in 2 weeks.** Hook: a *local-first, private* AI coding agent
 free with Ollama / LM Studio, or your own Claude Code. Open source (Apache-2.0),
 built on Roo Code.
 
+## Positioning (decided 2026-06-06, after competitive research)
+
+- **Sell on our own privacy merits.** The defensible edge is **verified zero telemetry** — we
+  ship no tracker at all (grep the bundle to prove it). Lead every channel with that.
+- **Keep the three integrations co-equal** (Ollama · LM Studio · Claude Code). Word the Claude
+  Code path honestly ("use your own Claude") — don't over-promise, given Anthropic is metering
+  third-party/headless usage (API-rate billing from Apr 4 2026; separate Agent-SDK credit pool
+  from Jun 15 2026).
+- **Don't exploit Roo Code's shutdown.** Credit Roo as our lineage only; do not target
+  refugees or center the May-15-2026 shutdown. Research found that wedge real, but we're taking
+  the classy route and competing on merit.
+
 Audiences ranked by fit: **r/LocalLLaMA** > **Show HN** > **X/Twitter** > VS Code
 Marketplace SEO. Post to the best-fit community first, learn, then widen.
 
