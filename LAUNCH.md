@@ -1,20 +1,26 @@
 # Ridvay Code — launch kit
 
-Goal: **1,000 users in 2 weeks.** Hook: a *local-first, private* AI coding agent —
-free with Ollama / LM Studio, or your own Claude Code. Open source (Apache-2.0),
-built on Roo Code.
+Goal: **1,000 users in 2 weeks.** Hook: a *private* AI coding agent for VS Code —
+bring **Claude** for frontier power, or run **fully local** with Ollama / LM Studio.
+**Zero telemetry** either way. Free, open source (Apache-2.0), built on Roo Code.
 
 ## Positioning (decided 2026-06-06, after competitive research)
 
-- **Sell on our own privacy merits.** The defensible edge is **verified zero telemetry** — we
-  ship no tracker at all (grep the bundle to prove it). Lead every channel with that.
-- **Keep the three integrations co-equal** (Ollama · LM Studio · Claude Code). Word the Claude
-  Code path honestly ("use your own Claude") — don't over-promise, given Anthropic is metering
-  third-party/headless usage (API-rate billing from Apr 4 2026; separate Agent-SDK credit pool
-  from Jun 15 2026).
-- **Don't exploit Roo Code's shutdown.** Credit Roo as our lineage only; do not target
-  refugees or center the May-15-2026 shutdown. Research found that wedge real, but we're taking
-  the classy route and competing on merit.
+- **Hero = Claude Code; core = local.** Lead with "a real VS Code agent UI for Claude Code,"
+  with Ollama / LM Studio as the **free, private** alternative. Claude is the pull; local is the
+  differentiator and the free on-ramp.
+- **Edge = verified zero telemetry.** We ship no tracker at all (grep the bundle). It's the one
+  thing Cline/Roo can't match — carry it on every channel, whichever backend.
+- **Be honest on cost — never "free unlimited Claude."** From **Jun 15 2026** Anthropic meters
+  headless / Agent-SDK usage (Pro $20 · Max5x $100 · Max20x $200/mo, then it stops), and our
+  integration uses that headless path. Say "bring your own Claude — your account or API key."
+- **Don't exploit Roo's shutdown.** Credit Roo as lineage only; don't target refugees or center
+  the May-15-2026 shutdown. The wedge is real, but we compete on merit.
+- **Channel fit:** r/LocalLLaMA → lead local + zero-telemetry (Claude as a bonus). Show HN / X →
+  lead "Claude Code agent UI that also runs fully local, zero telemetry."
+
+> The posts below still need a per-channel hook pass to match this (they were drafted
+> local-first). Update before firing.
 
 Audiences ranked by fit: **r/LocalLLaMA** > **Show HN** > **X/Twitter** > VS Code
 Marketplace SEO. Post to the best-fit community first, learn, then widen.

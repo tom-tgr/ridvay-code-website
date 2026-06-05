@@ -10,10 +10,11 @@ import {
 } from "@/lib/content";
 
 describe("site content", () => {
-  it("brands as Ridvay Code and positions local-first", () => {
+  it("brands as Ridvay Code and sells Claude + local", () => {
     expect(BRAND.name).toBe("Ridvay Code");
     expect(BRAND.tagline.length).toBeGreaterThan(0);
-    expect(BRAND.description).toMatch(/local-first/i);
+    expect(BRAND.description).toMatch(/claude/i);
+    expect(BRAND.description).toMatch(/local/i);
   });
 
   it("points install at the ridvay.ridvay-code marketplace item", () => {
@@ -21,15 +22,15 @@ describe("site content", () => {
     expect(LINKS.marketplace).toMatch(/^https:\/\//);
   });
 
-  it("exposes exactly the three local-first integrations", () => {
+  it("exposes exactly the three integrations, Claude first", () => {
     expect(INTEGRATIONS.map((i) => i.key)).toEqual([
+      "claude",
       "ollama",
       "lmstudio",
-      "claude",
     ]);
   });
 
-  it("never advertises a hosted cloud provider or API keys", () => {
+  it("never advertises a competing cloud provider or a Ridvay API", () => {
     const blob = JSON.stringify({
       BRAND,
       INTEGRATIONS,
@@ -37,7 +38,6 @@ describe("site content", () => {
       PRIVACY,
     }).toLowerCase();
     expect(blob).not.toContain("openai");
-    expect(blob).not.toContain("api key");
     expect(blob).not.toContain("ridvay api");
   });
 

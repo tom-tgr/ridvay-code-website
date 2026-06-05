@@ -11,8 +11,8 @@ describe("Ridvay Code landing page", () => {
 
   it("shows the hero with the local-first pitch", () => {
     cy.contains("h1", /senior ai developer/i).should("be.visible");
-    cy.contains("h1", /running on your machine/i).should("be.visible");
-    cy.contains(/no cloud account, no api middleman/i).should("be.visible");
+    cy.contains("h1", /fully local/i).should("be.visible");
+    cy.contains(/frontier-level coding/i).should("be.visible");
   });
 
   it("links every install CTA to the marketplace", () => {
@@ -37,7 +37,7 @@ describe("Ridvay Code landing page", () => {
 
   it("renders the feature and privacy sections", () => {
     cy.get("#features").find("h3").should("have.length", 6);
-    cy.get("#privacy").contains(/never leaves your machine/i).should("exist");
+    cy.get("#privacy").contains(/no telemetry/i).should("exist");
   });
 
   it("jumps to a section from the header nav", () => {

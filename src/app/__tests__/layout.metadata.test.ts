@@ -4,7 +4,7 @@ import { metadata } from "@/app/layout";
 describe("layout metadata", () => {
   it("sets an SEO title and description", () => {
     expect(String(metadata.title)).toMatch(/ridvay code/i);
-    expect(String(metadata.description)).toMatch(/local-first/i);
+    expect(String(metadata.description)).toMatch(/local/i);
   });
 
   it("declares local-first keywords", () => {

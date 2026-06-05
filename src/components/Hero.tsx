@@ -12,11 +12,11 @@ export function Hero() {
       <div className="mx-auto max-w-6xl px-6 pb-16 pt-20 text-center sm:pt-28">
         <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-zinc-300">
           <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-          Local-first AI coding agent for VS Code
+          Claude-powered · local-capable · zero telemetry
         </span>
         <h1 className="mx-auto mt-6 max-w-3xl text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl">
           Your senior AI developer.{" "}
-          <span className="text-primary">Running on your machine.</span>
+          <span className="text-primary">Claude-powered, or fully local.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-8 text-zinc-400">
           {BRAND.description}
@@ -34,9 +34,9 @@ export function Hero() {
         </div>
         <p className="mt-6 text-xs text-zinc-500">
           Works with{" "}
+          <span className="text-zinc-300">Claude</span> ·{" "}
           <span className="text-zinc-300">Ollama</span> ·{" "}
-          <span className="text-zinc-300">LM Studio</span> ·{" "}
-          <span className="text-zinc-300">Claude Code</span>
+          <span className="text-zinc-300">LM Studio</span>
         </p>
         <div className="mt-16">
           <EditorMock />

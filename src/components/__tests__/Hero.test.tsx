@@ -8,9 +8,9 @@ describe("Hero", () => {
     render(<Hero />);
     const h1 = screen.getByRole("heading", { level: 1 });
     expect(h1).toHaveTextContent(/your senior ai developer/i);
-    expect(h1).toHaveTextContent(/running on your machine/i);
+    expect(h1).toHaveTextContent(/fully local/i);
     expect(
-      screen.getByText(/no cloud account, no api middleman/i),
+      screen.getByText(/frontier-level coding/i),
     ).toBeInTheDocument();
   });
 
@@ -26,8 +26,8 @@ describe("Hero", () => {
 
   it("names the three supported runtimes", () => {
     render(<Hero />);
+    expect(screen.getByText("Claude")).toBeInTheDocument();
     expect(screen.getByText("Ollama")).toBeInTheDocument();
     expect(screen.getByText("LM Studio")).toBeInTheDocument();
-    expect(screen.getByText("Claude Code")).toBeInTheDocument();
   });
 });

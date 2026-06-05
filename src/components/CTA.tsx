@@ -9,8 +9,8 @@ export function CTA() {
           Code with AI. Keep it private.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-zinc-400">
-          Install Ridvay Code and point it at your local model or Claude Code in
-          under a minute.
+          Install Ridvay Code and point it at your own Claude or a local model
+          in under a minute.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <InstallButton className="h-12 w-full sm:w-auto" />

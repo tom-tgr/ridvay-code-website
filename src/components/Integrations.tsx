@@ -12,8 +12,8 @@ export function Integrations() {
             Bring your own model
           </h2>
           <p className="mt-4 text-lg text-zinc-400">
-            Ridvay Code runs on compute you control — local models or your own
-            Claude. Nothing routes through our servers.
+            Run Claude for frontier power, or local models for full privacy —
+            your account, your compute. Nothing routes through our servers.
           </p>
         </div>
         <div className="mt-14 grid gap-6 md:grid-cols-3">

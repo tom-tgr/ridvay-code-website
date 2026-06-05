@@ -1,11 +1,12 @@
 // Single source of truth for site copy + links.
-// Positioning: local-first / private AI coding agent (Ollama, LM Studio, Claude Code).
+// Positioning: a private AI coding agent for VS Code — bring Claude for frontier
+// power, or run fully local with Ollama / LM Studio. Zero telemetry either way.
 
 export const BRAND = {
   name: "Ridvay Code",
-  tagline: "Your senior AI developer — running entirely on your machine",
+  tagline: "Your senior AI developer in VS Code — bring Claude, or go fully local.",
   description:
-    "Ridvay Code is a local-first AI coding agent for VS Code. It writes code, fixes bugs, generates tests, and understands your whole codebase — powered by your own local models or Claude Code. No cloud account, no API middleman, and zero telemetry. Your code never leaves your machine — and you can verify it.",
+    "Ridvay Code is a free, open-source AI coding agent for VS Code. Drive Claude from a real agent UI for frontier-level coding, or run fully local and private on your own models with Ollama and LM Studio. No Ridvay account, no middleman, and zero telemetry — and you can verify it.",
 } as const;
 
 export const LINKS = {
@@ -36,11 +37,19 @@ export type Integration = {
 
 export const INTEGRATIONS: ReadonlyArray<Integration> = [
   {
+    key: "claude",
+    name: "Claude Code",
+    tagline: "Frontier power, your account",
+    description:
+      "Drive Claude from a full agent UI in VS Code. Bring your own Claude — your account or API key — with no Ridvay middleman in between.",
+    href: LINKS.claudeCode,
+  },
+  {
     key: "ollama",
     name: "Ollama",
     tagline: "Local llama & friends",
     description:
-      "Run Llama, Qwen, DeepSeek, Mistral and other open models locally with a single command. Zero config in Ridvay.",
+      "Run Llama, Qwen, DeepSeek, Mistral and other open models locally with a single command. Fully offline, fully free.",
     href: LINKS.ollama,
   },
   {
@@ -50,14 +59,6 @@ export const INTEGRATIONS: ReadonlyArray<Integration> = [
     description:
       "Point Ridvay at LM Studio's local server and use any GGUF model on your own hardware, fully offline.",
     href: LINKS.lmstudio,
-  },
-  {
-    key: "claude",
-    name: "Claude Code",
-    tagline: "Your Claude, direct",
-    description:
-      "Call your local Claude Code CLI directly — senior-level reasoning on your own subscription, no extra keys.",
-    href: LINKS.claudeCode,
   },
 ];
 
@@ -111,14 +112,14 @@ export const PRIVACY: ReadonlyArray<PrivacyPoint> = [
       "We don't ship a tracker at all. No analytics, no usage data, no phone-home — nothing to opt out of. Grep the published extension bundle and check for yourself.",
   },
   {
-    title: "Your code never leaves your machine",
+    title: "Your code goes only where you choose",
     description:
-      "Inference runs locally via Ollama or LM Studio, or through your own Claude Code. There are no Ridvay servers in the loop.",
+      "Run fully local with Ollama or LM Studio and nothing leaves your device — or use your own Claude, where requests go straight to Anthropic on your account. Never through a Ridvay server.",
   },
   {
     title: "No account, no keys to us",
     description:
-      "There's no Ridvay cloud to sign up for and no API middleman. You bring your own compute and stay in control.",
+      "There's no Ridvay cloud to sign up for and no API middleman. You bring your own compute or your own Claude, and stay in control.",
   },
   {
     title: "Open source",
