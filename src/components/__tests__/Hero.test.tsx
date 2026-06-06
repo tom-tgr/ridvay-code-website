@@ -7,10 +7,10 @@ describe("Hero", () => {
   it("shows the headline and supporting copy", () => {
     render(<Hero />);
     const h1 = screen.getByRole("heading", { level: 1 });
-    expect(h1).toHaveTextContent(/your senior ai developer/i);
-    expect(h1).toHaveTextContent(/fully local/i);
+    expect(h1).toHaveTextContent(/give it the task/i);
+    expect(h1).toHaveTextContent(/orchestrates the rest/i);
     expect(
-      screen.getByText(/frontier-level coding/i),
+      screen.getByText(/splits it into subtasks/i),
     ).toBeInTheDocument();
   });
 

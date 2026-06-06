@@ -1,4 +1,4 @@
-// Decorative, static mock of the Ridvay Code panel inside an editor.
+// Decorative, static mock of Ridvay Code orchestrating a task inside an editor.
 // Purely presentational — no interactivity, safe for static export.
 
 function Dot({ className }: { className: string }) {
@@ -13,11 +13,11 @@ export function EditorMock() {
         <Dot className="bg-[#febc2e]" />
         <Dot className="bg-[#28c840]" />
         <span className="ml-3 font-mono text-xs text-zinc-500">
-          utils.ts — ridvay-project
+          api/server.ts — ridvay-project
         </span>
         <span className="ml-auto hidden items-center gap-1.5 rounded-md border border-white/10 px-2 py-1 font-mono text-[11px] text-zinc-400 sm:flex">
           <span className="h-1.5 w-1.5 rounded-full bg-[#28c840]" />
-          Ollama · qwen2.5-coder
+          Claude · Sonnet
         </span>
       </div>
       <div className="flex">
@@ -31,32 +31,30 @@ export function EditorMock() {
         </div>
         <div className="flex-1 space-y-4 p-5 text-sm">
           <div className="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-sm bg-primary/15 px-4 py-2 text-zinc-100">
-            Refactor <code className="font-mono text-primary">calculateTotal</code>{" "}
-            and add unit tests.
+            Add rate limiting to the API, with tests.
           </div>
           <div className="space-y-3 text-zinc-300">
-            <p>On it — running locally, refactoring and adding coverage:</p>
+            <p>Planned 3 subtasks — running them now:</p>
             <ul className="space-y-1.5 font-mono text-[13px] text-zinc-400">
               <li>
-                <span className="text-[#28c840]">✓</span> Read{" "}
-                <span className="text-zinc-200">utils.ts</span>
-              </li>
-              <li>
-                <span className="text-[#28c840]">✓</span> Simplified{" "}
-                <span className="text-zinc-200">calculateTotal</span> (−12 lines)
-              </li>
-              <li>
                 <span className="text-[#28c840]">✓</span> Added{" "}
-                <span className="text-zinc-200">utils.test.ts</span> · 4 cases
+                <span className="text-zinc-200">rateLimiter</span> middleware (token bucket)
+              </li>
+              <li>
+                <span className="text-[#28c840]">✓</span> Wired it into{" "}
+                <span className="text-zinc-200">4 routes</span>
+              </li>
+              <li>
+                <span className="text-[#28c840]">✓</span> Wrote{" "}
+                <span className="text-zinc-200">rateLimiter.test.ts</span> · 6 cases
               </li>
             </ul>
             <pre className="overflow-x-auto rounded-lg border border-white/10 bg-black/40 p-4 font-mono text-[13px] leading-relaxed text-zinc-300">
-              <span className="text-[#ff7b72]">export const</span> calculateTotal ={" "}
-              <span className="text-[#ff7b72]">(</span>items<span className="text-[#ff7b72]">)</span> {"=>"}
-              {"\n"}  items.<span className="text-[#d2a8ff]">reduce</span>((sum, i){" "}
-              {"=>"} sum + i.price * i.qty, <span className="text-[#79c0ff]">0</span>);
+              <span className="text-[#ff7b72]">export const</span> rateLimiter ={" "}
+              <span className="text-[#ff7b72]">(</span>opts<span className="text-[#ff7b72]">)</span> {"=>"}
+              {"\n"}  <span className="text-[#d2a8ff]">bucket</span>(opts.max, opts.windowMs);
             </pre>
-            <p className="font-medium text-primary">All tests passing ✓</p>
+            <p className="font-medium text-primary">Task complete — 6/6 tests passing ✓</p>
           </div>
         </div>
       </div>

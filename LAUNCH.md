@@ -1,11 +1,14 @@
 # Ridvay Code — launch kit
 
-Goal: **1,000 users in 2 weeks.** Hook: a *private* AI coding agent for VS Code —
-bring **Claude** for frontier power, or run **fully local** with Ollama / LM Studio.
-**Zero telemetry** either way. Free, open source (Apache-2.0), built on Roo Code.
+Goal: **1,000 users in 2 weeks.** Hook: an *autonomous coding orchestrator* for VS Code —
+**give it the task, it does the rest.** Runs on **Claude** or your **local models**;
+**zero telemetry** either way. Free, open source (Apache-2.0), built on Roo Code.
 
 ## Positioning (decided 2026-06-06, after competitive research)
 
+- **Category = autonomous coding orchestrator.** The promise: give it a goal and it plans →
+  runs → fixes → finishes **on its own** (grounded in the inherited Orchestrator/Boomerang mode
+  + auto-run). Autonomy is the wedge; "give it the task, it does the rest" is the line.
 - **Hero = Claude Code; core = local.** Lead with "a real VS Code agent UI for Claude Code,"
   with Ollama / LM Studio as the **free, private** alternative. Claude is the pull; local is the
   differentiator and the free on-ramp.

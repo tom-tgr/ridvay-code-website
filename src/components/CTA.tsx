@@ -6,11 +6,11 @@ export function CTA() {
     <section className="border-t border-white/10 py-24">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Code with AI. Keep it private.
+          Hand off the next task
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-zinc-400">
-          Install Ridvay Code and point it at your own Claude or a local model
-          in under a minute.
+          Install Ridvay Code, point it at Claude or a local model, and give it
+          something to finish.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <InstallButton className="h-12 w-full sm:w-auto" />

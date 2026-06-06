@@ -10,7 +10,7 @@ describe("Home page (happy path)", () => {
     expect(container.querySelector("#features")).not.toBeNull();
     expect(container.querySelector("#privacy")).not.toBeNull();
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
-      /senior ai developer/i,
+      /give it the task/i,
     );
     expect(screen.getByRole("contentinfo")).toBeInTheDocument(); // footer
   });

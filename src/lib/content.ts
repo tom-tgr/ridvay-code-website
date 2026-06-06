@@ -1,12 +1,14 @@
 // Single source of truth for site copy + links.
-// Positioning: a private AI coding agent for VS Code — bring Claude for frontier
-// power, or run fully local with Ollama / LM Studio. Zero telemetry either way.
+// Positioning: an autonomous coding orchestrator for VS Code — give it a goal and
+// it plans, runs, and finishes the work on its own. Powered by Claude or local
+// models. Zero telemetry.
 
 export const BRAND = {
   name: "Ridvay Code",
-  tagline: "Your senior AI developer in VS Code — bring Claude, or go fully local.",
+  tagline:
+    "An autonomous coding orchestrator for VS Code — give it the task, it does the rest.",
   description:
-    "Ridvay Code is a free, open-source AI coding agent for VS Code. Drive Claude from a real agent UI for frontier-level coding, or run fully local and private on your own models with Ollama and LM Studio. No Ridvay account, no middleman, and zero telemetry — and you can verify it.",
+    "Ridvay Code is an AI coding orchestrator. Hand it a goal and it plans the work, splits it into subtasks, writes the code, runs the tests, and fixes what breaks — on its own, right in your editor. Powered by Claude or your local models. Zero telemetry, and you can prove it.",
 } as const;
 
 export const LINKS = {
@@ -41,7 +43,7 @@ export const INTEGRATIONS: ReadonlyArray<Integration> = [
     name: "Claude Code",
     tagline: "Frontier power, your account",
     description:
-      "Drive Claude from a full agent UI in VS Code. Bring your own Claude — your account or API key — with no Ridvay middleman in between.",
+      "Run the orchestrator on Claude for top-tier reasoning. Bring your own Claude — your account or API key — with no Ridvay middleman in between.",
     href: LINKS.claudeCode,
   },
   {
@@ -49,7 +51,7 @@ export const INTEGRATIONS: ReadonlyArray<Integration> = [
     name: "Ollama",
     tagline: "Local llama & friends",
     description:
-      "Run Llama, Qwen, DeepSeek, Mistral and other open models locally with a single command. Fully offline, fully free.",
+      "Run Qwen, DeepSeek, Llama and other open models locally with a single command. Fully offline, fully free.",
     href: LINKS.ollama,
   },
   {
@@ -67,39 +69,39 @@ export type Feature = { key: string; title: string; description: string };
 export const FEATURES: ReadonlyArray<Feature> = [
   {
     key: "generate",
-    title: "Intelligent code generation",
+    title: "Plans, then orchestrates",
     description:
-      "Describe functions, classes, or whole modules in plain English and let the agent build them.",
+      "Decomposes your goal into subtasks, runs each one to completion, and stitches the results back together.",
   },
   {
     key: "refactor",
-    title: "Advanced refactoring",
+    title: "Runs the full loop",
     description:
-      "Restructure and optimize existing code for readability and performance, even across large codebases.",
+      "Edits, runs commands, reads the output, and adjusts — without stopping to ask at every step.",
   },
   {
     key: "debug",
-    title: "Smart debugging",
+    title: "Fixes what breaks",
     description:
-      "Pinpoint, explain, and fix intricate bugs so you spend less time stuck and more time building.",
+      "Catches failing commands and tests and keeps working the problem until it's actually resolved.",
   },
   {
     key: "test",
-    title: "Automated tests",
+    title: "Tests until it's green",
     description:
-      "Generate comprehensive unit and integration tests to keep your code robust and reliable.",
+      "Writes and runs tests, then iterates on its own code until they pass.",
   },
   {
     key: "docs",
-    title: "Context-aware docs",
+    title: "Works across the whole repo",
     description:
-      "Produce clear docstrings and comments that accurately reflect what your code actually does.",
+      "Reads and edits many files at once, keeping a large change coherent from end to end.",
   },
   {
     key: "explain",
-    title: "Deep code understanding",
+    title: "You hold the leash",
     description:
-      "Ask about confusing files or blocks and get detailed, easy-to-follow explanations.",
+      "Let it run autonomously, or approve step by step. You decide how much rope it gets.",
   },
 ];
 

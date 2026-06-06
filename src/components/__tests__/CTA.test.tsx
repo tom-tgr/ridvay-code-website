@@ -7,7 +7,7 @@ describe("CTA", () => {
   it("renders the closing call to action", () => {
     render(<CTA />);
     expect(
-      screen.getByRole("heading", { name: /keep it private/i }),
+      screen.getByRole("heading", { name: /hand off the next task/i }),
     ).toBeInTheDocument();
     expect(
       screen.getByRole("link", { name: "Add to VS Code" }),

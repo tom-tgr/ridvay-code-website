@@ -6,16 +6,17 @@ import { BRAND, LINKS } from "@/lib/content";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-const title = "Ridvay Code — private AI coding agent for VS Code (Claude + local)";
+const title = "Ridvay Code — autonomous AI coding orchestrator for VS Code";
 
 export const metadata: Metadata = {
   metadataBase: new URL(LINKS.site),
   title,
   description: BRAND.description,
   keywords: [
+    "autonomous coding agent",
+    "AI coding orchestrator",
     "Claude Code agent",
     "private AI coding agent",
-    "local AI coding agent",
     "VS Code extension",
     "Ollama",
     "LM Studio",

@@ -7,11 +7,11 @@ export function Features() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Senior-level development power
+            Built to finish the job
           </h2>
           <p className="mt-4 text-lg text-zinc-400">
-            Not another autocomplete. Ridvay Code understands context, tackles
-            hard problems, and works across codebases of any size — all locally.
+            Most AI tools hand you a suggestion and stop. Ridvay Code keeps
+            going — planning, running, and correcting until the task is done.
           </p>
         </div>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -12,11 +12,11 @@ export function Hero() {
       <div className="mx-auto max-w-6xl px-6 pb-16 pt-20 text-center sm:pt-28">
         <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-zinc-300">
           <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-          Claude-powered · local-capable · zero telemetry
+          The autonomous coding orchestrator for VS Code
         </span>
         <h1 className="mx-auto mt-6 max-w-3xl text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl">
-          Your senior AI developer.{" "}
-          <span className="text-primary">Claude-powered, or fully local.</span>
+          Give it the task.{" "}
+          <span className="text-primary">It orchestrates the rest.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-8 text-zinc-400">
           {BRAND.description}

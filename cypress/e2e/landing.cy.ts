@@ -9,10 +9,10 @@ describe("Ridvay Code landing page", () => {
     cy.visit("/");
   });
 
-  it("shows the hero with the local-first pitch", () => {
-    cy.contains("h1", /senior ai developer/i).should("be.visible");
-    cy.contains("h1", /fully local/i).should("be.visible");
-    cy.contains(/frontier-level coding/i).should("be.visible");
+  it("shows the hero orchestrator pitch", () => {
+    cy.contains("h1", /give it the task/i).should("be.visible");
+    cy.contains("h1", /orchestrates the rest/i).should("be.visible");
+    cy.contains(/splits it into subtasks/i).should("be.visible");
   });
 
   it("links every install CTA to the marketplace", () => {
